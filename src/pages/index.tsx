@@ -1,7 +1,14 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
+import { trpc } from '../utils/trpc';
 
 export default function Home() {
+  const hello = trpc.hello.useQuery({ text: 'trainer' });
+
+  if (!hello.data) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Layout>
       <Head>
@@ -9,7 +16,7 @@ export default function Home() {
         <meta name="description" content="Battle Pokemon!" />
       </Head>
 
-      <div>Home</div>
+      <div>{hello.data.greeting}</div>
     </Layout>
   );
 }
