@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 
-export default function Home() {
+export default function Pokedex() {
   return (
     <Layout>
       <Head>
@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Battle Pokemon!" />
       </Head>
 
-      <div>Home</div>
+      <div>PokeDex</div>
     </Layout>
   );
 }

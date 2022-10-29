@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Battle Pokemon!" />
       </Head>
 
-      <div>Home</div>
+      <div>Not found</div>
     </Layout>
   );
 }
